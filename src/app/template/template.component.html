@@ -1,0 +1,85 @@
+<!-- <p>template works!</p>-->
+
+
+
+
+<div class="container">
+    <form name="myform" #frm="ngForm" (ngSubmit)="onbtnsubmit(frm)">
+        <div class="form-group">
+            <label for="user name">User name</label>
+            <input type="text" name="uname" class="form-control" #uname="ngModel" [(ngModel)]="un">
+        </div>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" name="email" class="form-control" #email="ngModel" [(ngModel)]="em">
+        </div>
+        <div class="form-group">
+            <label for="Password">password</label>
+            <input type="text" name="pass" class="form-control" #pass="ngModel" [(ngModel)]="ps">
+        </div>
+        <div class="form-group">
+            <label for="c Password ">confirm Password</label>
+            <input type="text" name="cpass" class="form-control" #cpass="ngModel" [(ngModel)]="cp">
+        </div>
+        <div class="form-group ">
+            <button type="submit" class="btn btn-primary"> submit</button>
+        </div>
+
+    </form>
+</div>
+
+
+
+<!-- <form name="form1" #frm="ngForm" (ngSubmit)="onsubmitForm(frm)">
+    <div class="form-group">
+        <label for="User Name">User Name  </label>
+        <input type="text" name="uname" class="form-control" #uname="ngModel" [(ngModel)]="un">
+    </div>
+    <div class="form-group">
+        <label for="password">password </label>
+        <input type="password" name="pass" class="form-control" #pass="ngModel" ngModel [(ngModel)]="ps">
+    </div>
+    <div class="form-group">
+        <label for="cpass">Confirm password </label>
+        <input type="text" name="cpass" class="form-control" #cpass="ngModel" [(ngModel)]="cp">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">
+           submit
+           </button>
+    </div>
+</form> -->
+<!-- <form name="form1" #frm="ngForm" (ngSubmit)="frm.form.valid &&onsubmitForm(frm)">
+    <div class="form-group">
+        <label for="User Name">User Name <span style="color: red;">*</span> </label>
+        <input type="text" name="uname" class="form-control" #uname="ngModel" ngModel required [ngClass]="{'is-invalid':frm.submitted && uname.invalid}" placeholder="Enter user name">
+        <div *ngIf="frm.submitted && uname.invalid" class="invalid-feedback">
+            User name is required
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email <span style="color: red;">*</span> </label>
+        <input type="text" name="email" class="form-control" #email="ngModel" ngModel required [ngClass]="{'is-invalid':frm.submitted && email.invalid}" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="Enter email name">
+        <div *ngIf=" email.touched" class="invalid-feedback">
+            <p *ngIf="email.errors?.['required']"> Email is Required </p>
+            <p *ngIf="email.errors?.['pattern']"> Please Enter Valid Email </p>
+
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">password </label>
+        <input type="password" name="pass" class="form-control" #pass="ngModel" ngModel ngModel>
+    </div>
+    <div class="form-group">
+        <label for="cpass">Confirm password </label>
+        <input type="text" name="cpass" class="form-control" #cpass="ngModel" ngModel>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">
+           submit
+           </button>
+    </div>
+</form> -->
